@@ -19,7 +19,7 @@ from src.app.styles import inject_premium_styles
 
 # Set page config for a widescreen layout and a dark themed default
 st.set_page_config(
-    page_title="Antigravity Data Cleaning & Reporting Suite",
+    page_title="Data Cleaning & Reporting Suite",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
