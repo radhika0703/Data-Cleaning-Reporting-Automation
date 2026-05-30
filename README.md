@@ -1,4 +1,4 @@
-# ⚡ Antigravity Data Cleaning & Reporting Automation Suite
+# ⚡ Data Cleaning & Reporting Automation
 
 An enterprise-grade, professional Python framework designed to automate the ingestion, profiling, cleaning, visual analysis, and reporting of datasets. 
 
