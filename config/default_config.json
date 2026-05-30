@@ -1,0 +1,77 @@
+{
+  "remove_duplicates": {
+    "enabled": true,
+    "subset": null,
+    "keep": "first"
+  },
+  "datetime_columns": ["Date"],
+  "numeric_columns": ["Price", "Quantity", "Discount", "Rating"],
+  "text_columns": [
+    {
+      "column": "Customer_Name",
+      "casing": "title",
+      "strip": true
+    }
+  ],
+  "categorical_mappings": [
+    {
+      "column": "Product_Category",
+      "mapping": {
+        "elec": "Electronics",
+        "Home and Kitchen": "Home & Kitchen",
+        "OFFICE SUPPLIES": "Office Supplies",
+        "unknown": "Books"
+      }
+    }
+  ],
+  "imputations": [
+    {
+      "column": "Price",
+      "strategy": "median"
+    },
+    {
+      "column": "Quantity",
+      "strategy": "constant",
+      "fill_value": 1
+    },
+    {
+      "column": "Discount",
+      "strategy": "constant",
+      "fill_value": 0.0
+    },
+    {
+      "column": "Rating",
+      "strategy": "median"
+    },
+    {
+      "column": "Customer_Name",
+      "strategy": "constant",
+      "fill_value": "Anonymous"
+    },
+    {
+      "column": "Product_Category",
+      "strategy": "constant",
+      "fill_value": "Books"
+    }
+  ],
+  "outliers": [
+    {
+      "column": "Quantity",
+      "method": "iqr",
+      "action": "clip",
+      "threshold": 1.5
+    },
+    {
+      "column": "Discount",
+      "method": "iqr",
+      "action": "clip",
+      "threshold": 1.5
+    },
+    {
+      "column": "Rating",
+      "method": "iqr",
+      "action": "clip",
+      "threshold": 1.5
+    }
+  ]
+}
